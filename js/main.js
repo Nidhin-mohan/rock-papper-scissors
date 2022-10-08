@@ -10,7 +10,7 @@ let finalResult = document.getElementById("result-final-stat");
 let choices = document.querySelectorAll(".choice");
 let arr = ["rock", "paper", "scissors"];
 let userChoice;
-
+let comChoice;
 let userPoint = 0 ;
 let computerPoint = 0;
 
@@ -18,7 +18,9 @@ choices.forEach(choice => choice.addEventListener("click", (e) => {
     userChoice = e.target.getAttribute("alt");
     userChoiceDisplay.innerText =  "User: " + userChoice;
  
-    computerChoiceDisplay.innerText = "Computer: " + computerChoice();
+    comChoice = computerChoice();
+    computerChoiceDisplay.innerText = "Computer: " + comChoice;
+    
 
       resultcall();
 
@@ -31,8 +33,8 @@ choices.forEach(choice => choice.addEventListener("click", (e) => {
 
 function resultcall(){
 
-  console.log(userChoice + computerChoice());
-  check = userChoice + computerChoice();
+  console.log(userChoice + comChoice);
+  check = userChoice + comChoice;
 
   if (
     check == "rockscissors" ||
@@ -53,10 +55,13 @@ function resultcall(){
            computerScoreDisplay.innerText = computerPoint;
     }
 
-    else
-    {
+     if (
+       check == "scissorsscissors" ||
+       check == "paperpaper" ||
+       check == "rockrock"
+     ) {
        finalResult.innerText = "Its a draw";
-    }
+     }
 
 
 

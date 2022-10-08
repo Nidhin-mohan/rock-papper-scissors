@@ -15,4 +15,4 @@ It took me 2 hrs just for to complete javascript.
 
 # Desktop view
 
-![Desktopview](/Image/colorchanger.gif) 
+![Desktopview](/Proj_Image/rockPapperScissors.gif) 
